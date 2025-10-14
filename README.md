@@ -13,7 +13,6 @@ Consolidar o aprendizado sobre:
 - Criação e configuração de instâncias EC2
 - Conexão remota via SSH
 - Gerenciamento básico de servidores Linux
-- Uso do GitHub para documentação técnica
 
 ---
 
@@ -36,11 +35,38 @@ Consolidar o aprendizado sobre:
 - Porta liberada: 22 (SSH)
 - Status: em execução
 
-### 2- Conexão via SSH
-```bash
+### 2- Conexão via SSH 
 ssh -i "minha-chave-aws.pem" ec2-user@<ip-da-instancia>
 
-### 3- Configuração Básica
+### 3 - Configuração Básica 
+sudo yum update -y
+echo "Olá, EC2 com DIO!" > index.html
+sudo python3 -m http.server 80
+
+### 4- Resultado 
+Servidor ativo e acessível via navegador no IP público.
+Veja os prints abaixo:
+
+Instância criada no painel EC2
+<img width="1072" height="84" alt="image" src="https://github.com/user-attachments/assets/c2a75192-f221-4640-b9e8-a3ef3f2623eb" />
+
+Conexão via SSH (Git Bash)
+
+<img width="549" height="341" alt="image" src="https://github.com/user-attachments/assets/f923d0be-f1c8-4a13-ae2c-1c3fd53911da" />
+
+
+
+### Conclusão
+Durante este laboratório, aprendi na prática como:
+Criar e gerenciar uma instância EC2 na AWS; 
+Acessar o servidor de forma segura via SSH;
+Publicar um conteúdo simples na web a partir da instância;
+Documentar o processo de forma clara e organizada no GitHub.
+
+Este repositório servirá como referência para estudos futuros sobre computação em nuvem e infraestrutura como serviço (IaaS).
+
+Obs: A intância foi encerrada.
+
 
 
 
