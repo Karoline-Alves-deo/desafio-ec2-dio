@@ -1,6 +1,6 @@
 #  Arquitetura AWS com S3, Lambda e EC2  
 
-Este repositório apresenta a arquitetura desenvolvida durante o **Desafio de Projeto da DIO (Digital Innovation One)**, utilizando os principais serviços da **Amazon Web Services (AWS)** — **S3**, **Lambda** e **EC2** — para simular um fluxo completo de processamento de dados na nuvem.
+Este repositório apresenta a arquitetura desenvolvida durante o **Desafio de Projeto da DIO (Digital Innovation One)**, utilizando os principais serviços da Amazon Web Services (AWS) — S3, Lambda e EC2, para simular um fluxo completo de processamento de dados na nuvem.
 
 ---
 
@@ -24,9 +24,9 @@ A arquitetura foi projetada para representar um fluxo **realista e seguro**, no 
 ##  Fluxo de Funcionamento
 
 1. **Usuário realiza upload** de um arquivo no bucket **Amazon S3** (`PUT Object`).  
-2. O **S3** dispara um evento automático (`Object Created`) que **aciona a função Lambda**.  
-3. A **função Lambda** processa os metadados do arquivo e realiza uma **requisição HTTP para a instância EC2**.  
-4. A **instância EC2** (com volume **EBS** anexado) executa o processamento necessário.  
+2. O **S3** dispara um evento automático (`Object Created`) que aciona a função Lambda.  
+3. A **função Lambda** processa os metadados do arquivo e realiza uma requisição HTTP para a instância EC2.  
+4. A **instância EC2** (com volume EBS anexado) executa o processamento necessário.  
 5. Os **resultados são enviados de volta ao S3** (`PUT Resultados/Registros`) para armazenamento e consulta posterior.  
 6. O **Security Group da EC2** controla as portas e o tráfego de entrada/saída, garantindo a segurança da comunicação.  
 
@@ -53,19 +53,6 @@ A arquitetura foi projetada para representar um fluxo **realista e seguro**, no 
 | **IAM & Security Groups** | Controle de acesso e segurança da infraestrutura |
 
 ---
-
-##  Estrutura do Repositório 
-```bash
-📦 aws-s3-lambda-ec2
- ┣ 📂 assets
- ┃ ┗ 📜 diagrama-arquitetura.png
- ┣ 📜 README.md
- ┗ 📜 arquitetura.drawio   # 
-
-
-
----
-
 
 
 Este projeto exemplifica o uso integrado de **serviços AWS em um ambiente híbrido (serverless + EC2)**, reforçando conceitos de **segurança, automação e escalabilidade**.  
